@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="/action_page.php" onsubmit="return myFunction()">
+  Username: <input type="text" id="uname" size="20" name="uname"><br>
+  Pin number: <input type="text" id="pin" size="20" name="pin"><br>
+  E-mail: <input type="text" id="email" size="20" name="mail"><br><br>
+  <input id = "elem" type="submit" value="Sign up"> 
+</form>
+
+<script>
+function myFunction() {
+  var uname = document.getElementById("uname").value;
+  var pin = document.getElementById("pin").value;
+  var at = document.getElementById("email").value.indexOf("@");
+  submitOK = "true";
+
+  if (uname.length > 10) //max 10 character in Username
+  { 
+    elem.addEventListener("click", handler1);
+    submitOK = "false";
+  } 
+
+  if (pin.length != 4 || isNaN(pin)) //pin number must be 4 digits
+  {
+    elem.addEventListener("click", handler2);
+    submitOK = "false";
+  }
+
+  if (at == -1) //return false if no @ found in the email address
+  { 
+    elem.addEventListener("click", handler3);
+    submitOK = "false";
+  }
+
+  if (submitOK == "false") {
+    return false;
+  }
+
+  alert("Sign up successfully!"); //pop-up the message if all information passed 
+  }
+
+  function handler1() {
+    alert("Username can not exceed 10 characters");
+  }
+
+  function handler2() {
+    alert("Pin number has to be 4 digits");
+  }
+  function handler3() {
+    alert("E-mail is not valid!");
+  }
+
+</script>
+
+</body>
+</html>
