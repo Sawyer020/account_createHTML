@@ -18,19 +18,19 @@ function myFunction() {
 
   if (uname.length > 10) //max 10 character in Username
   { 
-    elem.addEventListener("click", handler1);
+    elem.addEventListener("click", handler1);//add event listener to print the meassge from function handler1
     submitOK = "false";
   } 
 
   if (pin.length != 4 || isNaN(pin)) //pin number must be 4 digits
   {
-    elem.addEventListener("click", handler2);
+    elem.addEventListener("click", handler2);//add event listener to print the meassge from function handler2
     submitOK = "false";
   }
 
   if (at == -1) //return false if no @ found in the email address
   { 
-    elem.addEventListener("click", handler3);
+    elem.addEventListener("click", handler3);//add event listener to print the meassge from function handler3
     submitOK = "false";
   }
 
